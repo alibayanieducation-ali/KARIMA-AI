@@ -25,3 +25,9 @@ if __name__ == "__main__":
     print(karima.answer_question("What is photosynthesis?"))
     print(karima.help_with_task("Prepare a study plan"))
     print(karima.organize_info("Shopping list: apples, bread, milk"))
+python app.py
+Hello! I’m Karima, your personal assistant.
+You asked: 'What is photosynthesis?'. I’ll learn to answer this better soon!
+Let’s break down your task: Prepare a study plan.
+Here’s your organized info:
+- Shopping list: apples, bread, milk
