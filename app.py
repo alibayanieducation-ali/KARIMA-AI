@@ -31,3 +31,30 @@ You asked: 'What is photosynthesis?'. I’ll learn to answer this better soon!
 Let’s break down your task: Prepare a study plan.
 Here’s your organized info:
 - Shopping list: apples, bread, milk
+import openai
+import os
+from dotenv import load_dotenv
+
+load_dotenv()  # بارگذاری کلید API از فایل .env
+
+class Karima:
+    def __init__(self, name="Karima"):
+        self.name = name
+        openai.api_key = os.getenv("OPENAI_API_KEY")
+
+    def chat(self, message: str) -> str:
+        response = openai.ChatCompletion.create(
+            model="gpt-3.5-turbo",
+            messages=[
+                {"role": "system", "content": f"You are {self.name}, a friendly helpful assistant."},
+                {"role": "user", "content": message}
+            ]
+        )
+        return response.choices[0].message["content"]
+
+if __name__ == "__main__":
+    karima = Karima()
+    print(karima.greet())
+    user_input = input("You: ")
+    reply = karima.chat(user_input)
+    print(f"{karima.name}: {reply}")
