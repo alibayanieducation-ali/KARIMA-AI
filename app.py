@@ -1,2 +1,2 @@
-print("Hello! I am KARIMA AI 🤖")
-print("Your personal AI assistant.")
+print("Hello! I am Karima, your personal AI assistant.")
+print("How can I help you today?")
